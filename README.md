@@ -233,3 +233,5 @@ For wiring pinouts, Arduino IDE library installation, and NodeMCU flashing instr
 
 ## 7. License & Compliance
 FinNest is engineered for municipal, commercial, and private land administration departments adhering to standard digital cadastral and GIS survey conventions.
+#   f i n n e s t - 2 . 0 - s i h  
+ 
