@@ -31,21 +31,9 @@ import { AdminActivityPage } from './pages/admin/AdminActivityPage';
 import { AdminTaxPage } from './pages/admin/AdminTaxPage';
 
 // Root redirector based on authenticated role
+// Root redirector: In demo mode, immediately route to the admin console (or owner portal)
 const RootRedirect: React.FC = () => {
-  const { user, isAdmin, isLoading } = useAuth();
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-950 text-emerald-400">
-        <div className="w-8 h-8 border-3 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
-
+  const { isAdmin } = useAuth();
   return isAdmin ? <Navigate to="/admin" replace /> : <Navigate to="/portal" replace />;
 };
 
